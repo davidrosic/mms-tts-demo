@@ -1,0 +1,1 @@
+Speaker 1: Ovo je veoma duga rečenica koja je namerno napisana da bi se testiralo kako sistem za sintezu govora radi sa dužim tekstovima koji sadrže više informacija i kompleksniju strukturu, uključujući različite vrste reči i gramatičkih konstrukcija koje su karakteristične za srpski jezik, kao i proveru intonacije i ritma govora.
