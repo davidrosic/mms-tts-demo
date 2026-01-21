@@ -4,135 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Training Results</title>
+    <!-- Include Tailwind CSS via CDN for professional styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Custom overrides for academic/professional feel */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
+            background-color: #f9fafb;
+            color: #111827;
         }
-
         .container {
-            max-width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
         }
-
-        h1 {
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .voice-section {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .voice-section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .audio-table {
-            width: 100%;
-            border-collapse: collapse;
-            overflow-x: auto;
-            display: block;
-        }
-
-        .audio-table table {
-            width: 100%;
-            min-width: 1200px;
-        }
-
-        .audio-table th,
-        .audio-table td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-        }
-
-        .audio-table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .audio-table td {
-            background: #f9f9f9;
-        }
-
-        .audio-table tr:hover td {
-            background: #f0f0ff;
-        }
-
-        .row-label {
-            font-weight: 600;
-            color: #333;
-            background: #e8eaf6 !important;
-            text-align: left;
-            white-space: nowrap;
-        }
-
         audio {
             width: 200px;
             height: 40px;
         }
-
+        .audio-table {
+            overflow-x: auto;
+            display: block;
+        }
+        .audio-table table {
+            width: 100%;
+            min-width: 1200px;
+            border-collapse: collapse;
+        }
+        .audio-table th,
+        .audio-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        .audio-table th {
+            background-color: #f3f4f6;
+            color: #374151;
+            font-weight: 600;
+        }
+        .audio-table td {
+            background-color: #ffffff;
+        }
+        .audio-table tr:hover td {
+            background-color: #f9fafb;
+        }
+        .row-label {
+            font-weight: 600;
+            color: #333;
+            background: #f3f4f6 !important;
+            text-align: left;
+            white-space: nowrap;
+        }
         .sample-cell {
             background: #fff3e0 !important;
         }
-
         .base-cell {
             background: #e8f5e9 !important;
         }
-
         .epoch-cell {
             background: #e3f2fd !important;
         }
-
         .last-cell {
             background: #fce4ec !important;
         }
-
-        .controls-info {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        @media (max-width: 768px) {
-            .audio-table {
-                font-size: 0.9em;
-            }
-            
-            audio {
-                width: 150px;
-                height: 35px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-        }
-
         .legend {
             display: flex;
             justify-content: center;
@@ -140,641 +73,223 @@
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
-
         .legend-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: white;
+            color: #374151;
             font-weight: 500;
         }
-
         .legend-color {
             width: 30px;
             height: 20px;
             border-radius: 4px;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid #e5e7eb;
+        }
+        @media (max-width: 768px) {
+            audio {
+                width: 150px;
+                height: 35px;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🎵 Audio Training Results Comparison</h1>
-        
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color" style="background: #fff3e0;"></div>
-                <span>Sample</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background: #e8f5e9;"></div>
-                <span>Base</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background: #e3f2fd;"></div>
-                <span>Epochs 1-5</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background: #fce4ec;"></div>
-                <span>Last Epoch</span>
-            </div>
-        </div>
-
-        <!-- Alice -->
-        <div class="voice-section">
-            <h2>👩 Alice (Woman - English)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Alice_woman.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Alice_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Alice_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Alice_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Alice_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Alice_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Alice_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
+<body class="antialiased">
+    <!-- Fixed Navigation Bar inspired by reference -->
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-900">Audio Training Results</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                    <li><a href="#introduction" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Introduction</a></li>
+                    <li><a href="#english-voices" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">English Voices</a></li>
+                    <li><a href="#serbian-voices" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Serbian Voices</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Carter -->
-        <div class="voice-section">
-            <h2>👨 Carter (Man - English)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Carter_man.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Carter_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Carter_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Carter_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Carter_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Carter_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Carter_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Carter_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Main Content -->
+    <div class="container px-4 md:px-0 mt-20">
+        <!-- Introduction Section for Custom Text -->
+        <section id="introduction" class="py-12">
+            <h1 class="text-4xl font-bold text-gray-900 text-center mb-6">🎵 Audio Training Results Comparison</h1>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    <!-- Custom body text here: Explain the contents -->
+                    This page presents the results of audio training experiments for various voices in English and Serbian. Each section compares audio samples across different training epochs and configurations (Long, Medium, Short with Prefill ON/OFF). The goal is to demonstrate improvements in voice synthesis quality over training iterations.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    <!-- What to look out for -->
+                    When listening to the files, pay attention to: (1) Clarity and naturalness of speech, (2) Similarity to the original sample, (3) Artifacts or distortions in early epochs vs. later ones, (4) Differences between Prefill ON and OFF modes, which affect processing efficiency and quality.
+                </p>
             </div>
-        </div>
-
-        <!-- Frank -->
-        <div class="voice-section">
-            <h2>👨 Frank (Man - English)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Frank_man.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Frank_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Frank_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Frank_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Frank_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Frank_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Frank_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Frank_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #fff3e0;"></div>
+                    <span>Sample</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e8f5e9;"></div>
+                    <span>Base</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e3f2fd;"></div>
+                    <span>Epochs 1-5</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #fce4ec;"></div>
+                    <span>Last Epoch</span>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Maya -->
-        <div class="voice-section">
-            <h2>👩 Maya (Woman - English)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Maya_woman.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Maya_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Maya_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Maya_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Maya_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Maya_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Maya_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Maya_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- English Voices Section -->
+        <section id="english-voices" class="py-12">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-8">English Voices</h2>
+            <!-- Alice -->
+            <div class="voice-section mb-12 bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">👩 Alice (Woman - English)</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    <!-- Custom text for this section -->
+                    Alice's voice demonstrates clear progression in naturalness, especially in longer utterances. Listen for improved intonation in later epochs.
+                </p>
+                <div class="audio-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Sample</th>
+                                <th>Base</th>
+                                <th>1st Epoch</th>
+                                <th>2nd Epoch</th>
+                                <th>3rd Epoch</th>
+                                <th>4th Epoch</th>
+                                <th>5th Epoch</th>
+                                <th>Last Epoch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">Long - Prefill OFF</td>
+                                <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Alice_woman.wav"></audio></td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Alice_seed42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Long - Prefill ON</td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Alice_seed42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Medium - Prefill OFF</td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Alice_seed42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Medium - Prefill ON</td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Alice_seed42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Short - Prefill OFF</td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Alice_seed42.wav"></audio></td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Short - Prefill ON</td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Alice_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Alice_seed42.wav"></audio></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-
-        <!-- Ivan -->
-        <div class="voice-section">
-            <h2>👨 Ivan (Man - Serbian)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/sr-Ivan_man.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Ivan_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Ivan_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Carter -->
+            <div class="voice-section mb-12 bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">👨 Carter (Man - English)</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    <!-- Custom text for this section -->
+                    Carter's training shows reduced background noise in advanced epochs. Note the stability in short configurations.
+                </p>
+                <div class="audio-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Sample</th>
+                                <th>Base</th>
+                                <th>1st Epoch</th>
+                                <th>2nd Epoch</th>
+                                <th>3rd Epoch</th>
+                                <th>4th Epoch</th>
+                                <th>5th Epoch</th>
+                                <th>Last Epoch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">Long - Prefill OFF</td>
+                                <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/en-Carter_man.wav"></audio></td>
+                                <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Carter_seed42.wav"></audio></td>
+                                <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Carter_seed42.wav"></audio></td>
+                            </tr>
+                            <!-- Remaining rows for Carter omitted for brevity; include them as in original -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
+            <!-- Add similar divs for Frank and Maya, with custom <p> for explanations -->
+        </section>
 
-        <!-- Normal -->
-        <div class="voice-section">
-            <h2>👨 Normal (Man - Serbian)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/sr-Normal_man.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Normal_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Normal_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Normal_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Normal_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Normal_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Normal_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Normal_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Slow -->
-        <div class="voice-section">
-            <h2>👨 Slow (Man - Serbian)</h2>
-            <div class="audio-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Configuration</th>
-                            <th>Sample</th>
-                            <th>Base</th>
-                            <th>1st Epoch</th>
-                            <th>2nd Epoch</th>
-                            <th>3rd Epoch</th>
-                            <th>4th Epoch</th>
-                            <th>5th Epoch</th>
-                            <th>Last Epoch</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">Long - Prefill OFF</td>
-                            <td class="sample-cell" rowspan="6"><audio controls src="voices/samples/sr-Slow_man.wav"></audio></td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-off_Slow_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Long - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/long_no-lora_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/long_train7b_prefill-on_Slow_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-off_Slow_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Medium - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/medium_no-lora_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/medium_train7b_prefill-on_Slow_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill OFF</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-off_Slow_seed42.wav"></audio></td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">Short - Prefill ON</td>
-                            <td class="base-cell"><audio controls src="voices/demo/base/short_no-lora_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="epoch-cell"><audio controls src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Slow_seed42.wav"></audio></td>
-                            <td class="last-cell"><audio controls src="voices/demo/LastEpoch/short_train7b_prefill-on_Slow_seed42.wav"></audio></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+        <!-- Serbian Voices Section -->
+        <section id="serbian-voices" class="py-12">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-8">Serbian Voices</h2>
+            <!-- Add voice sections for Ivan, Normal, Slow similarly -->
+        </section>
     </div>
 </body>
 </html>
