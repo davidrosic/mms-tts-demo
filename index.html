@@ -6,6 +6,42 @@
     <title>Audio Training Results</title>
     <!-- Include Tailwind CSS via CDN for professional styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.audio-placeholder button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const src = button.getAttribute('data-src');
+                    const container = button.nextElementSibling; // The .audio-container div
+                    
+                    if (!src || !container) return;
+                    
+                    // Disable button to prevent multiple clicks
+                    button.disabled = true;
+                    button.textContent = 'Loading...';
+                    
+                    // Create audio element
+                    const audio = document.createElement('audio');
+                    audio.controls = true;
+                    audio.preload = 'none';
+                    audio.src = src;
+                    
+                    // Append to container
+                    container.appendChild(audio);
+                    
+                    // Play and handle errors
+                    audio.play().then(() => {
+                        button.textContent = 'Loaded';
+                    }).catch(error => {
+                        console.error('Error playing audio:', error);
+                        button.textContent = 'Error Loading';
+                        button.disabled = false;
+                    });
+                });
+            });
+        });
+    </script>
     <style>
         /* Custom overrides for academic/professional feel */
         body {
