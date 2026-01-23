@@ -32,7 +32,8 @@
                     
                     // Play and handle errors
                     audio.play().then(() => {
-                        button.textContent = 'Loaded';
+                        // button.textContent = 'Loaded';
+                        button.setAttribute("hidden","hidden");
                     }).catch(error => {
                         console.error('Error playing audio:', error);
                         button.textContent = 'Error Loading';
@@ -234,49 +235,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/en-Alice_woman.wav">Load and Play</button>
+                                        <button data-src="voices/samples/en-Alice_woman.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -285,43 +286,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -330,43 +331,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -375,43 +376,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -420,43 +421,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -465,43 +466,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Alice_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Alice_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -537,49 +538,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/en-Carter_man.wav">Load and Play</button>
+                                        <button data-src="voices/samples/en-Carter_man.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -588,43 +589,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -633,43 +634,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -678,43 +679,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -723,43 +724,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -768,43 +769,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Carter_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Carter_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -840,49 +841,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/en-Frank_man.wav">Load and Play</button>
+                                        <button data-src="voices/samples/en-Frank_man.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -891,43 +892,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -936,43 +937,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -981,43 +982,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1026,43 +1027,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1071,43 +1072,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Frank_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Frank_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1143,49 +1144,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/en-Maya_woman.wav">Load and Play</button>
+                                        <button data-src="voices/samples/en-Maya_woman.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1194,43 +1195,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1239,43 +1240,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1284,43 +1285,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1329,43 +1330,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1374,43 +1375,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Maya_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Maya_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1450,49 +1451,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/sr-Ivan_man.wav">Load and Play</button>
+                                        <button data-src="voices/samples/sr-Ivan_man.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1501,43 +1502,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1546,43 +1547,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1591,43 +1592,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1636,43 +1637,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1681,43 +1682,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Ivan_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Ivan_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1753,49 +1754,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/sr-Slow_man.wav">Load and Play</button>
+                                        <button data-src="voices/samples/sr-Slow_man.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1804,43 +1805,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1849,43 +1850,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1894,43 +1895,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1939,43 +1940,43 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -1984,43 +1985,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Slow_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Slow_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2056,49 +2057,49 @@
                                 <td class="row-label">Long - Prefill OFF</td>
                                 <td class="sample-cell" rowspan="6">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/samples/sr-Normal_man.wav">Load and Play</button>
+                                        <button data-src="voices/samples/sr-Normal_man.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2107,43 +2108,43 @@
                                 <td class="row-label">Long - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/long_no-lora_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/long_train7b100k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/long_train7b200k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/long_train7b300k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/long_train7b400k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/long_train7b500k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/long_train7b_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2152,43 +2153,43 @@
                                 <td class="row-label">Medium - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2197,43 +2198,43 @@
                                 <td class="row-label">Medium - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/medium_no-lora_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/medium_train7b100k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/medium_train7b200k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/medium_train7b300k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/medium_train7b400k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/medium_train7b500k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/medium_train7b_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2242,44 +2243,44 @@
                                 <td class="row-label">Short - Prefill OFF</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
 
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-off_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
@@ -2288,43 +2289,43 @@
                                 <td class="row-label">Short - Prefill ON</td>
                                 <td class="base-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/base/short_no-lora_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/1stEpoch/short_train7b100k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/2ndEpoch/short_train7b200k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/3rdEpoch/short_train7b300k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/4thEpoch/short_train7b400k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="epoch-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/5thEpoch/short_train7b500k_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
                                 <td class="last-cell">
                                     <div class="audio-placeholder">
-                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Normal_seed42.wav">Load and Play</button>
+                                        <button data-src="voices/demo/LastEpoch/short_train7b_prefill-on_Normal_seed42.wav">▶︎</button>
                                         <div class="audio-container"></div>
                                     </div>
                                 </td>
