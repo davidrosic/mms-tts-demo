@@ -167,13 +167,13 @@
                     Predstavljeni su glasovi generisani pomoću VibeVoice 7B TTS modela. Na ovom modelu je dodatno podešeno (eng. fine-tuning) 690 miliona parametara. Prikazana je evolucija treniranja kroz 5 epoha. Skup za treniranje je sastavljen od 123.914 primera autentičnog srpskog govora, prikupljenog iz spontanog razgovora u realnim uslovima. Ovi primeri su u trajanju od 3 do 10 sekundi, što je približno 200 sati audio materijala visokog kvaliteta. Trening set je pribavljen pomoću vrlo modifikovanog <a href="https://emilia-dataset.github.io/Emilia-Demo-Page/" class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Emilia-Pipe</a>-a čime je omogućena transkripcija i evaluacija srpskog jezika na višesatnim audio snimcima.
                 </p>
                 <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                    Za generisanje korišćeni su referentni uzorci naznačeni sa <b>SAMPLE</b> prema kojima se generiše izlaz. Iz sample fajlova je moguće izvući akcentuaciju, intonaciju, identitet govornika i opciono boju glasa. Da li će boja glasa biti preneta definisano je parametrom <b>PREFILL</b>.
-                    Testirane su 3 različite dužine rečenica sa jednim govornikom. Model podržava maksimalno 4 govornika sa prenosom boje glasa, ali za potrebe ovog projekta ograničićemo obim testiranja.
-                    Testirano je 7 glasova, od kojih 4 izvorno govore engleski dok preostala 3 govore srpski. Pravljene su varijacije u dužini sample glasova i u njihovoj brzini govora.
-                    Prikazana je promena izlaza kroz sukcesivne kontrolne tačke. <b>Base</b> označava model bez dodatnog podešavanja. <b>Epoch</b> označava jedan prolaz kroz celokupan trening set. <b>Last</b> je poslednja epoha treniranja modela.
+                    <p>Za generisanje korišćeni su referentni uzorci naznačeni sa <b>SAMPLE</b> prema kojima se generiše izlaz. Iz sample fajlova je moguće izvući akcentuaciju, intonaciju, identitet govornika i opciono boju glasa. Da li će boja glasa biti preneta definisano je parametrom <b>PREFILL</b>.</p>
+                    <p>Testirane su 3 različite dužine rečenica sa jednim govornikom. Model podržava maksimalno 4 govornika sa prenosom boje glasa, ali za potrebe ovog projekta ograničićemo obim testiranja.</p>
+                    <p>Testirano je 7 glasova, od kojih 4 izvorno govore engleski dok preostala 3 govore srpski. Pravljene su varijacije u dužini sample glasova i u njihovoj brzini govora.</p>
+                    <p>Prikazana je promena izlaza kroz sukcesivne kontrolne tačke. <b>Base</b> označava model bez dodatnog podešavanja. <b>Epoch</b> označava jedan prolaz kroz celokupan trening set. <b>Last</b> je poslednja epoha treniranja modela.</p>
                 </p>
                 <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                    Prilikom slušanja treba obratiti pažnju na: (1) prisustvo pozadinske muzike, (2) sličnost sample glasu, (2.1) sposobnost prenosa boje glasa kod fajlova naznačenih sa PREFILL-ON, (3) čistoću zvuka i prirodan tok govora, (4) artefakte ili distorzije.
+                    Prilikom slušanja treba obratiti pažnju na: (1) prisustvo pozadinske muzike, (2) sličnost referentnom uzorku, (2.1) sposobnost prenosa boje glasa kod fajlova naznačenih sa PREFILL-ON, (3) čistoću zvuka i prirodan tok govora, (4) artefakte ili distorzije.
                 </p>
             </div>
             <div class="legend">
